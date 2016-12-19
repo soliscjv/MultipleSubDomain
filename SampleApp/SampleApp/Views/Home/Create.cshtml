@@ -1,0 +1,25 @@
+﻿@using SampleApp.Models;
+@model Implementation
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<form action="CreateSubdomain">
+    <div class="row">
+        <div class="col-md-3">
+            @Html.TextBoxFor(c => c.ImplementationName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            @Html.TextBoxFor(c => c.Description)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <input type="submit" value="CreateSubdomain" />
+        </div>
+    </div>
+</form>

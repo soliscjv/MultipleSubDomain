@@ -1,0 +1,23 @@
+﻿@using SampleApp.ViewModels;
+@using SampleApp.Models;
+@model HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    
+    @Html.ActionLink("Create subdomain", "Create", "Home")
+    <h2>List of subdomains</h2>
+    @if (Model.Subdomains != null)
+    {
+        foreach (Implementation subdomain in Model.Subdomains)
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <p><a class="btn btn-default" href="http://@(subdomain.ImplementationName).sample.com:8282/Home/Detail">@subdomain.ImplementationName</a></p>
+                </div>
+            </div>
+        }
+    }
